@@ -2,7 +2,7 @@ import React from 'react'
 import {Stack} from '@mui/material';
 import {categories, catergories} from '../utils/constants';
 const selectedCategory = 'New';
-const Barside = () => {
+const Barside = ({selectedCategory ,setSelectedCategory}) => {
   return (
      <Stack
      direction  = "row"
@@ -14,6 +14,7 @@ const Barside = () => {
         {categories.map((category) =>(
             <button
             className='category-btn'
+            onClick = {() => setSelectedCategory(category.name)}
             style = {{
                 background: category.name ===
                 selectedCategory && '#FC1503',
