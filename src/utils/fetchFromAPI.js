@@ -4,7 +4,6 @@ const options = {
     url: BASE_URL,
     params: {
       maxResults: '50',
-      order: 'date'
     },
     headers: {
       'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
